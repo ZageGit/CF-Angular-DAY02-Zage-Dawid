@@ -1,0 +1,9 @@
+<nav class="navbar navbar-light bg-light">
+    <p>You've donated <span (click)="countClick()" class="btn btn-danger"> {{ clickCounter }} €</span></p>
+    <ng-template [ngIf]="clickCounter < 199" [ngIfElse]="none">
+        <p>You are <b>NO </b>VIP</p>
+</ng-template>
+<ng-template #none>
+        <p>You are <b>VIP</b></p>
+</ng-template>  
+</nav>

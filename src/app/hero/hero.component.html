@@ -1,0 +1,34 @@
+<form [formGroup]="info" (ngSubmit)="onSubmit()">
+ 
+    <label>
+      Name:
+      <input type="text" formControlName="name">
+    </label>
+   
+    <label>
+      Fuel:
+      <input type="text" formControlName="fuel">
+    </label>
+   
+    <label>
+      HorsePower:
+      <input type="number" formControlName="hp">
+    </label>
+   
+    <label>
+      Color:
+      <input type="text" formControlName="color">
+    </label>
+    
+    <input type="submit" class="btn btn-primary" value="Submit">
+   
+   </form>
+
+
+<div *ngFor="let car of cars">
+    <p>Name: {{car.name}}</p>
+    <p>Fuel: {{car.fuel}}</p>
+    <p>HorsePower: {{car.hp}}</p>
+    <p>Color: {{car.color}}</p>
+</div>
+
